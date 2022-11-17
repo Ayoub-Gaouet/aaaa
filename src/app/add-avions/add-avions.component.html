@@ -1,0 +1,27 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Avions :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Avions</label>
+            <input type="text" [(ngModel)]="newAvions.idAvions" name="idAvions" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Avions</label>
+            <input type="text" [(ngModel)]="newAvions.nomAvions" name="nomAvions" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix Avions</label>
+            <input type="number" [(ngModel)]="newAvions.prixAvions" name="prixAvions" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date" [(ngModel)]="newAvions.dateCreation" name="dateCreation" class="form-control">
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="addAvions()" class="btn btn-success">Ajouter</button>
+        </div>
+    </form>
+
+</div>

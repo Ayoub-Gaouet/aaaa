@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+        <h2>Modifier un Avions :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Avions</label>
+            <input type="text" [(ngModel)]="currentAvions.idAvions" name="idAvions" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Avions</label>
+            <input type="text" [(ngModel)]="currentAvions.nomAvions" name="nomAvions" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix Avions</label>
+            <input type="number" [(ngModel)]="currentAvions.prixAvions" name="prixAvions" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date" [ngModel]="currentAvions.dateCreation | date: 'yyyy-MM-dd'" (ngModelChange)=" currentAvions.dateCreation= $event" name="dateCreation" class="form-control">
+        </div>
+        <div class="mt-2">
+
+            <button type="submit" (click)="updateAvions()" class="btn btn-success">Modifer</button>
+
+        </div>
+    </form>
+
+</div>
